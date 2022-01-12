@@ -1,0 +1,30 @@
+<div class="container mt-3">
+    <div class="row">
+        <form [formGroup]="formvalue" (ngSubmit)="setDate()">
+            <h2 class="mb-3">Set Candidate Registration Period Date </h2>
+            <div class="mb-3 w-50">
+                <label for="date" class="form-label">Starting Date:</label>
+                <input formControlName="candRegSD" type="date" class="form-control" id="date">
+                <span class="text-danger" *ngIf="formvalue.controls['candRegSD'].dirty && formvalue.hasError('required','candRegSD')">*Start Date is required</span>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="date" class="form-label">Ending Date:</label>
+                <input formControlName="candRegED" type="date" class="form-control" id="date">
+                <span class="text-danger" *ngIf="formvalue.controls['candRegED'].dirty && formvalue.hasError('required','candRegED')">*End Date is required</span>
+            </div>
+            <h2 class="mb-3">Set Voting Period Date</h2>
+            <div class="mb-3 w-50">
+                <label for="date" class="form-label">Starting Date:</label>
+                <input formControlName="voteSD" type="date" class="form-control" id="date">
+                <span class="text-danger" *ngIf="formvalue.controls['voteSD'].dirty && formvalue.hasError('required','voteSD')">*Start Date is required</span>
+            </div>
+            <div class="mb-3 w-50">
+                <label for="date" class="form-label">Ending Date:</label>
+                <input formControlName="voteED" type="date" class="form-control" id="date">
+                <span class="text-danger" *ngIf="formvalue.controls['voteED'].dirty && formvalue.hasError('required','voteED')">*End Date is required</span>
+            </div>
+
+            <button type="submit" [disabled]="!formvalue.valid" class="btn btn-primary">Set Date</button>
+        </form>
+    </div>
+</div>

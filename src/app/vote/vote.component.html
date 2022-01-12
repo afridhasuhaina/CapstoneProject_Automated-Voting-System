@@ -1,0 +1,67 @@
+<!-- <ng-container *ngIf="voteday"> -->
+    <div class="container mt-3">
+        <div class="text-center">
+            <h1>Student Council Election Voting</h1>
+            <h5 class="mt-3">Please Enter Your Vote!!</h5>
+        </div>
+        <p>Note: You can only vote once</p>
+        <div class="row">
+            <ng-container *ngFor="let item of approvedList">
+                <div class="card col-md-3">
+                    <img src="{{item.symbol}}" alt="symbol">
+                    <h5>{{item.firstname}}</h5>
+                    <p>{{item.manifesto}}</p>
+                    <button class="btn btn-primary" (click)=vote(item)>Vote</button>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+<!-- </ng-container> -->
+
+
+<!-- Footer -->
+<section id="footer">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-4 pt-3">
+                <h5>Contact College Board</h5>
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:#">AVScollege@gmail.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Phone No:</dt>
+                    <dd><a href="tel:#">+917986543201</a> <span>or</span> <a href="tel:#">+919012345678</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4 text-center pt-3">
+                <p><u><a href="home">Automated Voting System</a></u> is a Voting System for College Student election</p>
+                <p class="h6">© 2022 All right Reversed.<a class="ml-2" href="#" target="_blank" style="text-decoration: none;">AVS College</a></p>
+            </div>
+            <div class="col-md-4 pt-3">
+                <ul class="list-unstyled px-4 quick-links">
+                    <li class="pb-3">
+                        <a href="home">Home</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="voterregister">Voter Register</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="candregister">Candidate Register</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="result">Result</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="login">Admin Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

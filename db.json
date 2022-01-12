@@ -1,0 +1,63 @@
+{
+  "studentinfo": [
+    {
+      "collegeId": 1001,
+      "firstname":"Amey",
+      "lastname":"Rane",
+      "email":"ameyrane@gmail.com",
+      "password":"ameyrane"
+    },
+    {
+      "collegeId": 1002 ,
+      "firstname":"Darpan",
+      "lastname":"Nemade",
+      "email":"darpannemade@gmail.com",
+      "password":"darpannemade"
+    },
+    {
+      "collegeId": 1003,
+      "firstname":"Saurabh",
+      "lastname":"Narkhede",
+      "email":"saurabhnarkhede@gmail.com",
+      "password":"saurabhnarkhede"
+    },
+    {
+      "collegeId": 1004,
+      "firstname":"Pranav",
+      "lastname":"Patil",
+      "email":"pranavpatil@gmail.com",
+      "password":"pranavpatil"
+    },
+    {
+      "collegeId": 1005,
+      "firstname":"Uditi",
+      "lastname":"Shah",
+      "email":"uditishah@gmail.com",
+      "password":"uditishah"
+    },
+    {
+      "collegeId": 1006,
+      "firstname":"Bharat",
+      "lastname":"Sharma",
+      "email":"bharatsharma@gmail.com",
+      "password":"bharatsharma"
+    }
+
+  ],
+
+  "adminList": [
+    {
+      "id": 1,
+      "email": "admin@gmail.com",
+      "password": 12345678
+    }
+  ],
+
+  "candidateList": {
+    "id": 0,
+    "firstname":"",
+    "lastname":"",
+    "email":"",
+    "manifesto":""
+  }
+}

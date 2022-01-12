@@ -1,0 +1,22 @@
+.card{
+    margin-top: 10px;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #103783;
+    background: linear-gradient(90deg, hsla(221, 45%, 73%, 1) 0%, hsla(220, 78%, 29%, 1) 100%);
+}
+.card h1,.form-text{
+    color:rgb(253, 93, 45);
+}
+label{
+    font-weight: 600;
+    color: black;
+}
+/* .btn{
+    font-weight: 500;
+} */

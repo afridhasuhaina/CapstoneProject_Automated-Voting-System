@@ -1,0 +1,28 @@
+.navbar{
+    background-color: #103783 !important;
+}
+.nav-item:hover{
+    background-color: #3062c7;
+}
+.navbar .nav-item .nav-link{
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: rgb(253, 93, 45);
+    font-family: 'futura-pt', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+.navbar-brand{
+    color: rgb(253, 93, 45);
+}
+@media only screen and (min-width:768px) {
+    .navbar .nav-item.itm{
+        margin-left:0.5rem;
+    }
+    .navbar .nav-item.itm2{
+        margin-left:0.5rem;
+    }
+    .navbar .nav-item.itm3{
+        margin-left:45rem;
+    }
+}

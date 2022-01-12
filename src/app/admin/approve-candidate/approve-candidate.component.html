@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="card">
+        <div class="text-center mt-3">
+            <h1>Candidates Applied For Election</h1>
+        </div>
+        <table class="table table-responsive mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">College ID</th>
+                    <th scope="col">Manifesto</th>
+                    <th scope="col">Symbol</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of candidateList">
+                    <td>{{item.collegeid}}</td>
+                    <td>{{item.manifesto}}</td>
+                    <td>
+                        <img src="{{item.symbol}}" style="width: 120px;" alt="symbol">
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success" (click)="approve(item)">Approve</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="card">
+        <div class="text-center mt-3">
+            <h1>Approved Candidates</h1>
+        </div>
+        <table class="table table-responsive mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Candidate ID</th>
+                    <th scope="col">Approval</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of approvedList">
+                    <td>{{item.candidateid}}</td>
+                    <td>Approved</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

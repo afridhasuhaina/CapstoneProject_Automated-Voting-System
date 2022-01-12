@@ -1,0 +1,28 @@
+/* carousel */
+.carousel-item img{
+    height:400px;
+}
+
+/* candidate list cards */
+.card {
+    padding: 20px;
+    margin: 50px;
+}
+.card img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 15px;
+    /* transition: 0.3s ease-in-out; */
+}
+
+
+/* Footer */
+#footer{
+    background-color: rgb(155,175,217);
+    /* margin-top: 5px; */
+}
+#footer .quick-links li a{
+    padding:5px 100px;
+    font-weight: 600;
+    color:black ;
+}

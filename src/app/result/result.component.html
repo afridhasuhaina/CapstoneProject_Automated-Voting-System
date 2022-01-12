@@ -1,0 +1,76 @@
+<ng-container *ngIf="resultList.display">
+    <div class="container mt-3">
+        <div class="card">
+            <div class="text-center">
+                <h1>Student Council Election Results</h1>
+            </div>
+            <table class="table table-responsive mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Candidate Name</th>
+                        <th scope="col">Symbol</th>
+                        <th scope="col">Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of resultList">
+                        <td>{{item.firstname}} &nbsp; {{item.lastname}}</td>
+                        <td>
+                            <img src="{{item.symbol}}" style="width: 120px;" alt="symbol">
+                        </td>
+                        <td>{{item.count}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-container>
+
+
+<!-- Footer -->
+<section id="footer">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-4 pt-3">
+                <h5>Contact College Board</h5>
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:#">AVScollege@gmail.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Phone No:</dt>
+                    <dd><a href="tel:#">+917986543201</a> <span>or</span> <a href="tel:#">+919012345678</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4 text-center pt-3">
+                <p><u><a href="home">Automated Voting System</a></u> is a Voting System for College Student election</p>
+                <p class="h6">© 2022 All right Reversed.<a class="ml-2" href="#" target="_blank" style="text-decoration: none;">AVS College</a></p>
+            </div>
+            <div class="col-md-4 pt-3">
+                <ul class="list-unstyled px-4 quick-links">
+                    <li class="pb-3">
+                        <a href="home">Home</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="voterregister">Voter Register</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="candregister">Candidate Register</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="result">Result</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="login">Admin Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+  

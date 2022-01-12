@@ -1,0 +1,28 @@
+<div class="container-fluid d-flex flex-column flex-md-row">
+    <nav class="navbar navbar-expand-md navbar-light d-flex flex-md-column">
+        <h5>Admin Dashboard</h5>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSide" aria-controls="navbarSide" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse w-100" id="navbarSide">
+            <ul class="navbar-nav w-100 d-flex flex-md-column text-center text-md-end fw-2">
+                <li>
+                    <a routerLink="approve" class="nav-link" aria-current="page">Approve Candidate</a>
+                </li>
+                <li>
+                    <a routerLink="setdate" class="nav-link">Set Date</a>
+                </li>
+                <li>
+                    <a routerLink="announce" class="nav-link">Announce Result</a>
+                </li>
+                <li>
+                    <a routerLink="/login" class="nav-link">Log out</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="ps-0 ps-md-5 flex-grow-1">
+        <router-outlet></router-outlet>
+    </main>
+</div>

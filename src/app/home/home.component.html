@@ -1,0 +1,91 @@
+<!-- carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" style="background-color:rgb(253, 93, 45)" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" style="background-color:rgb(253, 93, 45)" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" style="background-color:rgb(253,93,45)" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.ccny.cuny.edu/sites/default/files/SERC%20logo2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="http://www.lagancollege.com/wp-content/uploads/2020/11/student-council-banner.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://tidechange.ca/wp-content/uploads/2018/07/TC-VoteBallot.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+<!-- approved Candidate List -->
+<div class="title text-center">
+    <h1>Student Council Election Candidate Details</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let candidate of approvedList">
+            <div class="card col-md-6">
+                <img src="{{candidate.symbol}}" alt="Symbol">
+                <p><strong>Symbol ID:</strong>{{candidate.symbolId}}</p>
+                <h5>Manifesto:</h5>
+                <p>{{candidate.manifesto}}</p>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<!-- Footer -->
+<section id="footer">
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-4 pt-3">
+                <h5>Contact College Board</h5>
+                <dl class="contact-list">
+                    <dt>Address:</dt>
+                    <dd>798 South Park Avenue, Jaipur, Raj</dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:#">AVScollege@gmail.com</a></dd>
+                </dl>
+                <dl class="contact-list">
+                    <dt>Phone No:</dt>
+                    <dd><a href="tel:#">+917986543201</a> <span>or</span> <a href="tel:#">+919012345678</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="col-md-4 text-center pt-3">
+                <p><u><a href="home">Automated Voting System</a></u> is a Voting System for College Student election</p>
+                <p class="h6">© 2022 All right Reversed.<a class="ml-2" href="#" target="_blank" style="text-decoration: none;">AVS College</a></p>
+            </div>
+            <div class="col-md-4 pt-3">
+                <ul class="list-unstyled px-4 quick-links">
+                    <li class="pb-3">
+                        <a href="home">Home</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="voterregister">Voter Register</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="candregister">Candidate Register</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="result">Result</a>
+                    </li>
+                    <li class="pb-3">
+                        <a href="login">Admin Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
