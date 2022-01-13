@@ -6,8 +6,8 @@
     <form [formGroup]="voterReg" (ngSubmit)="voterregister()">
         <div class="mb-3">
             <label for="InputcollegeId" class="form-label">College ID</label>
-            <input formControlName="collegeId" type="number" class="form-control" id="InputcollegeId">
-            <span class="text-danger" *ngIf="voterReg.controls['collegeId'].dirty && voterReg.hasError('required','collegeId')">*College ID is required</span>
+            <input formControlName="college_id" type="number" class="form-control" id="InputcollegeId">
+            <span class="text-danger" *ngIf="voterReg.controls['college_id'].dirty && voterReg.hasError('required','college_id')">*College ID is required</span>
         </div>
         <div class="mb-3">
             <label for="InputFirstName" class="form-label">First Name</label>
@@ -54,6 +54,12 @@
                 </dl>
             </div>
             <div class="col-md-4 text-center pt-3">
+                <ul class="list-unstyled list-inline social text-center">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com"><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.youtube.com"><i class="fa fa-youtube"></i></a></li>
+                </ul>
                 <p><u><a href="home">Automated Voting System</a></u> is a Voting System for College Student election</p>
                 <p class="h6">© 2022 All right Reversed.<a class="ml-2" href="#" target="_blank" style="text-decoration: none;">AVS College</a></p>
             </div>

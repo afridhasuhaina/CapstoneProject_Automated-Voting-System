@@ -13,7 +13,7 @@ export class VoterRegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.voterReg=this.formbuilder.group({
-      collegeId:(['',Validators.required]),
+      college_id:(['',Validators.required]),
       firstname:(['',Validators.required]),
       lastname:(['',Validators.required]),
       email:(['',Validators.required]),
@@ -26,7 +26,7 @@ export class VoterRegisterComponent implements OnInit {
     this.studentinfo.getStudentInfo()
     .subscribe(res=>{
       const user = res.find((a:any)=>{
-        return a.collegeId === this.voterReg.value.collegeId && a.firstname === this.voterReg.value.firstname && a.lastname === this.voterReg.value.lastname && a.email === this.voterReg.value.email && a.password === this.voterReg.value.password 
+        return a.college_id === this.voterReg.value.college_id && a.firstname === this.voterReg.value.firstname && a.lastname === this.voterReg.value.lastname && a.email === this.voterReg.value.email && a.password === this.voterReg.value.password 
       })
       if(user){
         alert("registration Successfull");

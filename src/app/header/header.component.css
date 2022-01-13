@@ -15,6 +15,9 @@
 .navbar-brand{
     color: rgb(253, 93, 45);
 }
+.nav2{
+    color: rgb(155,175,217);
+}
 @media only screen and (min-width:768px) {
     .navbar .nav-item.itm{
         margin-left:0.5rem;

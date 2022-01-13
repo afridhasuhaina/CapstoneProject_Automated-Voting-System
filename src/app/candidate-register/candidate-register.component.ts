@@ -12,12 +12,13 @@ import { candidatedetailsModel } from './candidatedetails.model';
 })
 export class CandidateRegisterComponent implements OnInit {
   public candidateReg!:FormGroup;
-  candidateModelObj!:candidatedetailsModel;
+  public candidateModelObj: any=candidatedetailsModel;
+  public addvalue:number=0;
   constructor(private formbuilder:FormBuilder, private router:Router, private studentinfo:StudentInfoService, private candidate:CandidateService) { }
 
   ngOnInit(): void {
     this.candidateReg=this.formbuilder.group({
-      collegeid:(['',Validators.required]),
+      college_id:(['',Validators.required]),
       firstname:(['',Validators.required]),
       lastname:(['',Validators.required]),
       email:(['',Validators.required]),
@@ -31,27 +32,53 @@ export class CandidateRegisterComponent implements OnInit {
     this.studentinfo.getStudentInfo()
     .subscribe(res=>{
       const user = res.find((a:any)=>{
-        return a.collegeId === this.candidateReg.value.collegeid && a.firstname === this.candidateReg.value.firstname && a.lastname === this.candidateReg.value.lastname && a.email === this.candidateReg.value.email && a.password === this.candidateReg.value.password 
+        return (a.college_id === this.candidateReg.value.college_id && a.firstname === this.candidateReg.value.firstname && a.lastname === this.candidateReg.value.lastname && a.email === this.candidateReg.value.email && a.password === this.candidateReg.value.password) 
       })
       if(user){
-        this.candidateModelObj.collegeid=this.candidateReg.value.collegeid;
+        // this.postdatas();
+        this.addvalue++;
+        this.candidateModelObj.candidateid=this.addvalue;
+        this.candidateModelObj.college_id=this.candidateReg.value.college_id;
         this.candidateModelObj.firstname=this.candidateReg.value.firstname;
         this.candidateModelObj.lastname=this.candidateReg.value.lastname;
         this.candidateModelObj.email=this.candidateReg.value.email;
         this.candidateModelObj.manifesto=this.candidateReg.value.manifesto;
 
-        this.candidate.postCandidate(this.candidateModelObj)
-        .subscribe(res=>{
-          console.log(res);
-          alert("registration Successfull") ;
-        })
-        
+        this.addcand();
+        alert("registration Successfull");
         this.candidateReg.reset();
         this.router.navigate(['/vote'])
+        // this.candidateModelObj.candidateid=this.addvalue;
+        // this.candidateModelObj.college_id=this.candidateReg.value.college_id;
+        // this.candidateModelObj.firstname=this.candidateReg.value.firstname;
+        // this.candidateModelObj.lastname=this.candidateReg.value.lastname;
+        // this.candidateModelObj.email=this.candidateReg.value.email;
+        // this.candidateModelObj.manifesto=this.candidateReg.value.manifesto;
+
+        // this.candidate.postCandidate(this.candidateModelObj).subscribe(res=>{
+        //   console.log(res);
       }else{
         alert("User Not Found");
       }
     })
   }
+
+  addcand(){
+    this.candidate.postcandidate(this.candidateModelObj);
+  }
+
 }
+
+// postdatas(){
+  //   this.candidateModelObj.college_id=this.candidateReg.value.college_id;
+  //   this.candidateModelObj.firstname=this.candidateReg.value.firstname;
+  //   this.candidateModelObj.lastname=this.candidateReg.value.lastname;
+  //   this.candidateModelObj.email=this.candidateReg.value.email;
+  //   this.candidateModelObj.manifesto=this.candidateReg.value.manifesto;
+  //   this.candidate.postCandidate(this.candidateModelObj)
+  //   .subscribe(res=>{
+  //     console.log(res);
+  //     alert("candidate added");
+  //   });
+  // }
 

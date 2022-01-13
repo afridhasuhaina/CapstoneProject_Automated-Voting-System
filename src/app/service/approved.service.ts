@@ -9,14 +9,14 @@ export class ApprovedService {
   constructor(private http : HttpClient) { }
 
   postapproved(data:any){
-    return this.http.post<any>("",data)
+    return this.http.post<any>("http://localhost:3000/approvedList",data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
   getapproved(){
-    return this.http.get<any>("")
+    return this.http.get<any>("http://localhost:3000/approvedList")
     .pipe(map((res:any)=>{
       return res;
     }))

@@ -22,7 +22,7 @@ export class AnnounceResultComponent implements OnInit {
   
   announce(){
     this.resultList.display=true;
-    this.result.updateResult(this.resultList.display,this.resultList.id)
+    this.result.updateResult(this.resultList.display,this.resultList)
     .subscribe(res=>{
       alert("Result announced Successfully");
     })

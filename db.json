@@ -1,42 +1,42 @@
 {
   "studentinfo": [
     {
-      "collegeId": 1001,
+      "college_id": 1001,
       "firstname":"Amey",
       "lastname":"Rane",
       "email":"ameyrane@gmail.com",
       "password":"ameyrane"
     },
     {
-      "collegeId": 1002 ,
+      "college_id": 1002 ,
       "firstname":"Darpan",
       "lastname":"Nemade",
       "email":"darpannemade@gmail.com",
       "password":"darpannemade"
     },
     {
-      "collegeId": 1003,
+      "college_id": 1003,
       "firstname":"Saurabh",
       "lastname":"Narkhede",
       "email":"saurabhnarkhede@gmail.com",
       "password":"saurabhnarkhede"
     },
     {
-      "collegeId": 1004,
+      "college_id": 1004,
       "firstname":"Pranav",
       "lastname":"Patil",
       "email":"pranavpatil@gmail.com",
       "password":"pranavpatil"
     },
     {
-      "collegeId": 1005,
+      "college_id": 1005,
       "firstname":"Uditi",
       "lastname":"Shah",
       "email":"uditishah@gmail.com",
       "password":"uditishah"
     },
     {
-      "collegeId": 1006,
+      "college_id": 1006,
       "firstname":"Bharat",
       "lastname":"Sharma",
       "email":"bharatsharma@gmail.com",
@@ -53,11 +53,46 @@
     }
   ],
 
-  "candidateList": {
-    "id": 0,
-    "firstname":"",
-    "lastname":"",
-    "email":"",
-    "manifesto":""
-  }
+  "candidateList": [
+    {
+      "candidateid":"",
+      "college_id":"",
+      "firstname":"",
+      "lastname":"",
+      "email":"",
+      "manifesto":""
+    }
+  ],
+
+  "approvedList": [
+    {
+      "candidateid":"",
+      "college_id":"",
+      "manifesto":"",
+      "symbol":""
+    }
+  ],
+
+  "voterList":[
+    {}
+  ],
+
+  "event":[
+    {
+      "id":"",
+      "candRegSD":"",
+      "candRegED":"",
+      "voteSD":"",
+      "voteED":""
+    }
+  ],
+
+  "result":[
+    {
+      "count":0,
+      "display":false
+    }
+  ]
+
+
 }

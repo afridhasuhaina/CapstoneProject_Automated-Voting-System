@@ -2,7 +2,22 @@
     width:50%;
     margin-top: 10px;
     margin-left:0px;
+    height:100%;
 }
 .container-fluid{
     margin-top:5px;
+}
+
+.card-table {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: .25rem;
+    height: 100%;
+    padding-bottom: 5%;
 }

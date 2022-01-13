@@ -1,6 +1,6 @@
 export class candidatedetailsModel{
-    // id:number=+1;
-    collegeid:number=0;
+    candidateid:number=0;
+    college_id:number=0;
     firstname:string='';
     lastname:string='';
     email:string='';

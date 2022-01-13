@@ -11,14 +11,14 @@ export class EventService {
   constructor(private http : HttpClient) { }
 
   getsettedDate(){
-    return this.http.get<any>("")
+    return this.http.get<any>("http://localhost:3000/event")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
   postDate(data:any){
-    return this.http.post<any>("",data)
+    return this.http.post<any>("http://localhost:3000/event",data)
     .pipe(map((res:any)=>{
       return res;
     }))

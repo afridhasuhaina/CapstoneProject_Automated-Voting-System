@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:'login',component:AdminLoginComponent},
   {path:'dashboard',component:AdminDashboardComponent,
   children: [
-    {path:'',redirectTo:'home',pathMatch:'full'},
+    {path:'',redirectTo:'approve',pathMatch:'full'},
     {path:'announce',component:AnnounceResultComponent},
     {path:'approve',component:ApproveCandidateComponent},
     {path:'setdate',component:SetDateComponent}

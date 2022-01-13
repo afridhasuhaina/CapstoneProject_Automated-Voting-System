@@ -8,24 +8,29 @@ import { CandidateService } from 'src/app/service/candidate.service';
   styleUrls: ['./approve-candidate.component.css']
 })
 export class ApproveCandidateComponent implements OnInit {
-  public candidateList:any;
+  public candidateList:any=[];
   public approvedList:any;
   constructor(private candidate:CandidateService, private approved:ApprovedService) { }
 
   ngOnInit(): void {
-    this.candidate.getcandidateInfo()
+    this.candidate.getcandidate()
     .subscribe(res=>{
       this.candidateList = res;
       console.log(this.candidateList);
-    });
+    })
 
     this.getAllapproved();
   }
 
   approve(item:any){
-    this.approved.postapproved(item);
-    alert("candidate approved");
-    this.getAllapproved();
+    item.candidateid=this.candidateList.item.candidateid;
+    this.approved.postapproved(item)
+    .subscribe(res=>{
+      console.log(res);
+      alert("candidate approved")
+      this.getAllapproved();
+    });
+
   }
 
   getAllapproved(){

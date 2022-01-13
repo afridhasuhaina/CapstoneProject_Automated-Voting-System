@@ -9,14 +9,14 @@ export class VoterService {
   constructor(private http:HttpClient) { }
 
   getVoter(){
-    return this.http.get<any>("")
+    return this.http.get<any>("http://localhost:3000/voterList")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
   post(data:any){
-    return this.http.post<any>("",data)
+    return this.http.post<any>("http://localhost:3000/voterList",data)
     .pipe(map((res:any)=>{
       return res;
     }))

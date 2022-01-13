@@ -11,21 +11,21 @@ export class ResultService {
   constructor(private http:HttpClient) { }
 
   postResult(data:any){
-    return this.http.post<any>("",data)
+    return this.http.post<any>("http://localhost:3000/result",data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
   getResult(){
-    return this.http.get<any>("")
+    return this.http.get<any>("http://localhost:3000/result")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
   updateResult(data:any,id:number){
-    return this.http.put<any>(""+id,data)
+    return this.http.put<any>("http://localhost:3000/result"+id,data)
     .pipe(map((res:any)=>{
       return res;
     }))
